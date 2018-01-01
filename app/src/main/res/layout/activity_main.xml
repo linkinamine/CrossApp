@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/colorPrimary"
+  tools:context="com.qrcode.mohamedelaminebenallouch.test_anim.MainActivity">
+
+
+  <RelativeLayout
+    android:id="@+id/rl"
+    android:layout_width="wrap_content"
+    android:layout_height="150dp"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true">
+
+    <View
+      android:id="@+id/iv_semi_circle_big"
+      android:layout_width="wrap_content"
+      android:layout_height="150dp"
+      android:background="@drawable/action_half_disc_big"/>
+
+    <ImageView
+      android:id="@+id/iv_anim_top_right"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:layout_alignParentBottom="true"
+      android:layout_marginBottom="50dp"
+      android:layout_marginEnd="20dp"
+      android:layout_toStartOf="@+id/iv_anim_bottom_right"
+      app:srcCompat="@drawable/avd_anim_male"/>
+
+    <ImageView
+      android:id="@+id/iv_anim_top_left"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:layout_alignTop="@+id/iv_anim_top_right"
+      android:layout_marginStart="20dp"
+      android:layout_toEndOf="@+id/iv_anim_bottom_left"
+      app:srcCompat="@drawable/avd_anim_male"/>
+
+
+    <ImageView
+      android:id="@+id/iv_anim_bottom_left"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:layout_alignParentBottom="true"
+      android:layout_toStartOf="@+id/iv_semi_circle_small"
+      app:srcCompat="@drawable/avd_anim_male"/>
+
+    <ImageView
+      android:id="@+id/iv_anim_bottom_right"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:layout_alignParentBottom="true"
+      android:layout_toEndOf="@+id/iv_semi_circle_small"
+      app:srcCompat="@drawable/avd_anim_male"/>
+
+    <View
+      android:id="@+id/iv_semi_circle_small"
+      android:layout_width="200dp"
+      android:layout_height="50dp"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="50dp"
+      android:background="@drawable/action_half_disc_small"
+      />
+  </RelativeLayout>
+
+</RelativeLayout>
