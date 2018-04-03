@@ -12,61 +12,88 @@
   <RelativeLayout
     android:id="@+id/rl"
     android:layout_width="wrap_content"
-    android:layout_height="150dp"
+    android:layout_height="@dimen/view_holder_rl"
     android:layout_alignParentBottom="true"
     android:layout_centerHorizontal="true">
 
     <View
       android:id="@+id/iv_semi_circle_big"
-      android:layout_width="wrap_content"
-      android:layout_height="150dp"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/semi_circle_big_vw"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentStart="true"
       android:background="@drawable/action_half_disc_big"/>
 
-    <ImageView
-      android:id="@+id/iv_anim_top_right"
-      android:layout_width="64dp"
-      android:layout_height="64dp"
-      android:layout_alignParentBottom="true"
-      android:layout_marginBottom="50dp"
-      android:layout_marginEnd="20dp"
-      android:layout_toStartOf="@+id/iv_anim_bottom_right"
-      app:srcCompat="@drawable/avd_anim_male"/>
+    <android.support.constraint.ConstraintLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      tools:layout_editor_absoluteX="0dp"
+      tools:layout_editor_absoluteY="0dp">
 
-    <ImageView
-      android:id="@+id/iv_anim_top_left"
-      android:layout_width="64dp"
-      android:layout_height="64dp"
-      android:layout_alignTop="@+id/iv_anim_top_right"
-      android:layout_marginStart="20dp"
-      android:layout_toEndOf="@+id/iv_anim_bottom_left"
-      app:srcCompat="@drawable/avd_anim_male"/>
+      <ImageView
+        android:id="@+id/iv_anim_bottom_left"
+        android:layout_width="@dimen/ca_default_buttons_iv"
+        android:layout_height="@dimen/ca_default_buttons_iv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_anim_top_left"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/avd_anim_male"/>
+
+      <ImageView
+        android:id="@+id/iv_anim_top_left"
+        android:layout_width="@dimen/ca_default_buttons_iv"
+        android:layout_height="@dimen/ca_default_buttons_iv"
+        app:layout_constraintBottom_toTopOf="@+id/iv_semi_circle_small"
+        app:layout_constraintEnd_toStartOf="@+id/iv_anim_bottom_left"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/iv_anim_bottom_left"
+        app:srcCompat="@drawable/avd_anim_male"
+        />
+
+      <ImageView
+        android:id="@+id/iv_anim_top_right"
+        android:layout_width="@dimen/ca_default_buttons_iv"
+        android:layout_height="@dimen/ca_default_buttons_iv"
+        app:layout_constraintBottom_toTopOf="@+id/iv_semi_circle_small"
+        app:layout_constraintEnd_toStartOf="@+id/iv_anim_bottom_right"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/iv_anim_top_right"
+        app:srcCompat="@drawable/avd_anim_male"/>
+
+      <ImageView
+        android:id="@+id/iv_anim_bottom_right"
+        android:layout_width="@dimen/ca_default_buttons_iv"
+        android:layout_height="@dimen/ca_default_buttons_iv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/iv_anim_top_right"
+        app:srcCompat="@drawable/avd_anim_male"
+        />
+
+      <View
+        android:id="@+id/iv_semi_circle_small"
+        android:layout_width="@dimen/semi_circle_small_width_vw"
+        android:layout_height="@dimen/semi_circle_small_height_vw"
+        android:background="@drawable/action_half_disc_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+      <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"/>
+
+    </android.support.constraint.ConstraintLayout>
 
 
-    <ImageView
-      android:id="@+id/iv_anim_bottom_left"
-      android:layout_width="64dp"
-      android:layout_height="64dp"
-      android:layout_alignParentBottom="true"
-      android:layout_toStartOf="@+id/iv_semi_circle_small"
-      app:srcCompat="@drawable/avd_anim_male"/>
-
-    <ImageView
-      android:id="@+id/iv_anim_bottom_right"
-      android:layout_width="64dp"
-      android:layout_height="64dp"
-      android:layout_alignParentBottom="true"
-      android:layout_toEndOf="@+id/iv_semi_circle_small"
-      app:srcCompat="@drawable/avd_anim_male"/>
-
-    <View
-      android:id="@+id/iv_semi_circle_small"
-      android:layout_width="200dp"
-      android:layout_height="50dp"
-      android:layout_alignParentBottom="true"
-      android:layout_centerHorizontal="true"
-      android:layout_marginTop="50dp"
-      android:background="@drawable/action_half_disc_small"
-      />
   </RelativeLayout>
 
 </RelativeLayout>
